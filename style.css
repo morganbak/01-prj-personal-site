@@ -17,7 +17,7 @@ nav {
 nav ul {
   list-style: none; /* Remove bullets */
   display: flex; /* Horizontal layout */
-  justify-content: flex-start; /* Align items to the left */
+  justify-content: center; /* Align items to center */
   gap: 32px; /* Space between links */
   margin: 0;
   padding: 0 0 0 32px; /* Add left padding for spacing */
@@ -42,7 +42,7 @@ nav a:hover {
 
 .hero-container {
 
-  min-height: 400px;
+  min-height: 220px; /* Smaller hero section height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,10 +58,10 @@ nav a:hover {
   }
 
   .hero-icon {
-    width: 120px;
-    height: 120px;
+    margin-top: 3rem;
+  width: 20rem; /* Larger icon image */
+  height: 20rem;
     object-fit: cover;
-    border-radius: 50%;
     box-shadow: 0 2px 8px rgba(44,62,80,0.12);
     margin-bottom: 18px;
   }
@@ -82,10 +82,8 @@ nav a:hover {
 .description-content p {
   text-align: center;
   color: #fff;
-  font-size: 2.2em;
-  font-weight: 600;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  background: rgba(44,62,80,0.2); /* subtle overlay for readability */
+  font-weight: 300;
+  background: #fff; 
   padding: 32px 24px;
   border-radius: 12px;
   font-size: 1.2em;
@@ -142,13 +140,11 @@ nav a:hover {
 .work-image-placeholder {
   background: #e8f5e9;
   color: #1b4636;
-  width: 240px; /* Larger image */
-  height: 150px;
+  width: 240px; /* Fixed image width */
+  height: 150px; /* Fixed image height */
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2em;
+  object-fit: cover; /* Crop images to fill container */
+  display: block;
   margin-bottom: 18px;
 }
 
