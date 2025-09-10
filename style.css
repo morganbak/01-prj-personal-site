@@ -1,38 +1,71 @@
+
 /* Add you CSS here */
-.hero-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 100px 40px; /* Increased padding */
-  background: linear-gradient(90deg, #e0eafc 0%, #cfdef3 100%);
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+body {
+  font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
+  background: #fff;
+  color: #222;
+}
+/* Simple navigation bar styles */
+nav {
+  background: #fff; /* White nav bar */
+  /* No border or shadow for a flat look */
+  margin: 24px 0 32px 0; /* Space above and below nav, left aligned */
+  width: 100%;
+  padding: 12px 0;
 }
 
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.hero-container .image-placeholder {
-  width: 140px;
-  height: 140px;
-  background: #cfd8dc;
-  border-radius: 8px; /* Changed from 50% to 8px for square corners */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3em;
-  color: #607d8b;
-  margin-bottom: 18px;
-}
-
-.hero-content h1 {
+nav ul {
+  list-style: none; /* Remove bullets */
+  display: flex; /* Horizontal layout */
+  justify-content: flex-start; /* Align items to the left */
+  gap: 32px; /* Space between links */
   margin: 0;
-  font-size: 2.2em;
-  color: #37474f;
+  padding: 0 0 0 32px; /* Add left padding for spacing */
 }
+
+nav a {
+  text-decoration: none; /* Remove underline */
+  color: #2d6a4f; /* Green accent for nav links */
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+nav a:hover {
+  background: #e8f5e9; /* Very light green highlight */
+  color: #1b4636; /* Darker green on hover */
+}
+
+
+
+.hero-container {
+
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+  
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-icon {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.12);
+    margin-bottom: 18px;
+  }
+
 
 .description-container {
   display: flex;
@@ -48,8 +81,15 @@
 
 .description-content p {
   text-align: center;
+  color: #fff;
+  font-size: 2.2em;
+  font-weight: 600;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  background: rgba(44,62,80,0.2); /* subtle overlay for readability */
+  padding: 32px 24px;
+  border-radius: 12px;
   font-size: 1.2em;
-  color: #37474f;
+  color: #222;
   margin: 0;
 }
 
@@ -57,7 +97,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f0f4f8;
+  background: #fff;
   border-radius: 6px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   margin: 36px auto 0 auto; /* Increased margin */
@@ -75,11 +115,12 @@
 
 .skills-list li {
   font-size: 1.3em; /* Larger font */
-  color: #37474f;
+  color: #1b4636; /* Green accent for skills */
   font-weight: 500;
 }
 
 .work-examples-container {
+  background: #fff;
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two per row */
   gap: 48px 48px; /* 48px vertical and horizontal gap */
@@ -99,44 +140,45 @@
 }
 
 .work-image-placeholder {
+  background: #e8f5e9;
+  color: #1b4636;
   width: 240px; /* Larger image */
   height: 150px;
-  background: #e0e0e0;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #888;
   font-size: 1.2em;
   margin-bottom: 18px;
 }
 
 .work-description {
+  color: #222;
   text-align: center;
   font-size: 1.1em;
-  color: #37474f;
   margin: 0;
 }
 
 .footer-container {
-  background: #222;
-  color: #fff;
+  background: #9ccaaa;
+  color: #1b4636;
   text-align: center;
-  padding: 40px 0;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  margin: 48px auto 0 auto;
-  max-width: 1100px;
+  padding: 40px 0 24px 0; /* More space at top, less at bottom */
+  width: 100%; /* Full width */
+  margin: 48px 0 0 0; /* Only margin at top */
+  border-radius: 0; /* No rounded corners */
+  box-shadow: none; /* No shadow */
 }
 
 .footer-content h2 {
   margin-top: 0;
-  margin-bottom: 16px;
-  font-size: 1.5em;
+  margin-bottom: 8px;
+  font-size: 1.3em;
   letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .footer-content p {
-  margin: 8px 0;
-  font-size: 1.1em;
+  margin: 4px 0;
+  font-size: 1em;
 }
